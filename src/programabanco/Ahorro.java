@@ -1,9 +1,8 @@
 
 package programabanco;
 public class Ahorro {
-    float monto;
+    double monto;
     double interes;
-    float monto_op;
 
     public Ahorro(int monto){
             this.monto=monto;
@@ -23,6 +22,7 @@ public class Ahorro {
                             interes=0.05;
                         }else
                         {interes=0.07;}}}}
+        System.out.println("Porcentaje de interes: " + interes +"%");
         return interes;
     }
     public double cuenta_sueldo(){
@@ -59,17 +59,17 @@ public class Ahorro {
                         {interes=0.125;}}}}
         return interes;
     }
-    public float setdeposito(float monto_op){
-        this.monto_op=monto_op;
+    public double setdeposito(float monto_op){
         monto=monto+monto_op;
+        System.out.println("Monto final: "+monto);
         return monto;
     }
-    public float setretiro(float monto_op){
-        this.monto_op=monto_op;
+    public double setretiro(int monto_op){
         monto=monto-monto_op;
+        System.out.println("Monto final: "+monto);
         return monto;
     }
-    public float getmonto(){
+    public double getmonto(){
         return monto;
     }
 }
