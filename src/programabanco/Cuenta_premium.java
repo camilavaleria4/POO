@@ -18,6 +18,10 @@ public class Cuenta_premium {
         return ahorro.setdeposito(monto_op);
     }
     
+    public double setretiro(int monto_op){
+        return ahorro.setretiro(monto_op);
+    }
+    
     public void imprimir_interes(){
         System.out.println("Nuevo interes: "+ ahorro.cuenta_premium());
     }
