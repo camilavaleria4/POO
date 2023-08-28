@@ -7,7 +7,9 @@ public class Cuenta_sueldo {
     
     
     public Cuenta_sueldo(){
+        numero_cuenta="444444";
         nombre="Cuenta sueldo";
+        ahorro=new Ahorro(0);
     }
     
     public Cuenta_sueldo(String numero_cuenta, String nombre, int monto){
@@ -25,13 +27,13 @@ public class Cuenta_sueldo {
     }
     
     public void imprimir_interes(){
-    System.out.println("Nuevo interes: "+ ahorro.cuenta_sueldo());
+    System.out.println("Nuevo interes: "+ ahorro.cuenta_sueldo()+"%");
     }
     
     public void imprimir_datos(){
         System.out.println("Numero de cuenta: " + numero_cuenta);
         System.out.println("Nombre de la cuenta: " + nombre);
         System.out.println("Monto de la cuenta: " + ahorro.getmonto());
-        System.out.println("Interes de la cuenta: " + ahorro.cuenta_sueldo());
+        System.out.println("Interes de la cuenta: " + ahorro.cuenta_sueldo()+"%");
     }
 }
